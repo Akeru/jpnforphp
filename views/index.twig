@@ -1,10 +1,61 @@
 {% extends 'layout.twig' %}
 {% block body %}
-    <p>Components:</p>
-    <ul>
-        <li>Helper</li>
-        <li>Analyser</li>
-        <li><a href="/transliterator">Transliterator</a></li>
-        <li><a href="/converter">Converter</a></li>
-    </ul>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>JpnForPhp - Demos</h1>
+
+            <p>This is a demo website for the JpnForPhp, a tiny PHP lib which provides nice functions & wrappers to
+                interact with Japanese language.</p>
+
+            <p><a class="btn btn-primary btn-lg" href="http://mbilbille.github.io/jpnforphp/" role="button">Learn
+                    more &raquo;</a></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Available components</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Helper</h2>
+
+                <p></p>
+
+                <p><a class="btn btn-default" href="/helper" role="button">View details »</a></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Analyser</h2>
+
+                <p></p>
+
+                <p><a class="btn btn-default" href="/analyzer" role="button">View demos »</a></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Transliterator</h2>
+
+                <p></p>
+
+                <p><a class="btn btn-default" href="/transliterator" role="button">View demos »</a></p>
+            </div>
+            <div class="col-md-3">
+                <h2>Converter</h2>
+
+                <p></p>
+
+                <p><a class="btn btn-default" href="/converter" role="button">View demos »</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Note: demos are using the development branch</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

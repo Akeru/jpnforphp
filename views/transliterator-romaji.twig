@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="container">
+        <h3>Romaji transliteration</h3>
+
+        <p>Original string was {{ original }}</p>
+
+        <p>Hepburn is {{ hepburn }}</p>
+
+        <p>&nbsp;</p>
+        <a href="/transliterator">Back</a>
+    </div>
+{% endblock %}

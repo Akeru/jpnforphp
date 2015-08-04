@@ -1,0 +1,18 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="container">
+        <h3>Japanese year converter</h3>
+
+        <p>Original year was {{ year }}</p>
+
+        <p>Japanese year is {{ result }}</p>
+
+        <p>Hiragana is {{ kana }}</p>
+
+        <p>Romaji is {{ romaji }}</p>
+
+        <p>&nbsp;</p>
+        <a href="/converter">Back</a>
+    </div>
+{% endblock %}
+

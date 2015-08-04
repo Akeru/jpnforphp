@@ -1,15 +1,43 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JpnForPhp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JpnForPhp - Demos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        .container .text-muted {
+            margin: 20px 0;
+        }
+
+    </style>
 </head>
 <body>
-<div>
-    <header>
-        <h1>JpnForPhp</h1>
-    </header>
-    {% block body %}{% endblock %}
-</div>
+{% block body %}{% endblock %}
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">
+            JpnForPhp maintained by <a href="https://github.com/mbilbille">mbilbille</a>
+            | Demos maintained by <a href="https://github.com/akeru">Akeru</a>
+        </p>
+    </div>
+</footer>
 </body>
 </html>

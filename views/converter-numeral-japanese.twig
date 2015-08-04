@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="container">
+        <h3>Japanese numeral converter</h3>
+
+        <p>Original numeral was {{ numeral }}</p>
+
+        <p>Kanji is {{ kanji }}</p>
+
+        <p>Hiragana is {{ hiragana }}</p>
+
+        <p>Romaji is {{ romaji }}</p>
+
+        <p>&nbsp;</p>
+        <a href="/converter">Back</a>
+    </div>
+{% endblock %}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "65b0dde335d902ba9168b915ac1a6403",
+    "hash": "ab9205c4772fc81796615bf557cb9de7",
     "packages": [
         {
             "name": "mbilbille/jpnforphp",
@@ -225,16 +225,16 @@
         },
         {
             "name": "silex/silex",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Silex.git",
-                "reference": "2d623a4853c37005d3790e5e7897a2c30b492caf"
+                "reference": "0507b772519ab0d9dd258bb39748921229ad5c46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Silex/zipball/2d623a4853c37005d3790e5e7897a2c30b492caf",
-                "reference": "2d623a4853c37005d3790e5e7897a2c30b492caf",
+                "url": "https://api.github.com/repos/silexphp/Silex/zipball/0507b772519ab0d9dd258bb39748921229ad5c46",
+                "reference": "0507b772519ab0d9dd258bb39748921229ad5c46",
                 "shasum": ""
             },
             "require": {
@@ -303,7 +303,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2015-06-04 21:27:48"
+            "time": "2015-08-04 10:41:12"
         },
         {
             "name": "symfony/debug",
