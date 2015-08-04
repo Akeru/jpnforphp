@@ -1,14 +1,28 @@
 {% extends 'layout.twig' %}
 {% block body %}
     <div class="container">
-        <h3>Kana transliteration</h3>
-
-        <p>Original string was {{ original }}</p>
-
-        <p>Hiragana is {{ hiragana }}</p>
-
-        <p>Katakana is {{ katakana }}</p>
-
+        <h3>Kana transliterator results</h3>
+        {% for key, value in _context %}
+            {% if key != 'app' and key != '_parent' %}
+                <div class="row">
+                    <div class="col-sm-4">{{ key }}</div>
+                    <div class="col-sm-8">
+                        {% if value is same as(false) %}
+                            false
+                        {% elseif value is same as(true) %}
+                            true
+                        {% elseif value is iterable %}
+                            {% for entry in value %}
+                                '{{ entry }}'
+                                {% if not loop.last %},{% endif %}
+                            {% endfor %}
+                        {% else %}
+                            {{ value }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
         <p>&nbsp;</p>
         <a href="/transliterator">Back</a>
     </div>

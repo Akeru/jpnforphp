@@ -87,10 +87,16 @@ $app->post('/transliterator/romaji', function (Request $request) use ($app) {
             'error' => 'String cannot be empty'
         ));
     } else {
-        $hepburn = new Romaji();
+        $hepburn = new Romaji('hepburn');
+        $kunrei = new Romaji('kunrei');
+        $nihon = new Romaji('nihon');
+        $wapuro = new Romaji('wapuro');
         return $app['twig']->render('transliterator-romaji.twig', array(
             'original' => $original,
             'hepburn' => $hepburn->transliterate($original),
+            'kunrei' => $kunrei->transliterate($original),
+            'nihon' => $nihon->transliterate($original),
+            'wapuro' => $wapuro->transliterate($original),
         ));
     }
 });
@@ -102,7 +108,7 @@ $app->post('/transliterator/kana', function (Request $request) use ($app) {
             'error' => 'String cannot be empty'
         ));
     } else {
-        $hiragana = new Kana();
+        $hiragana = new Kana('hiragana');
         $katakana = new Kana('katakana');
         return $app['twig']->render('transliterator-kana.twig', array(
             'original' => $original,
@@ -127,7 +133,7 @@ $app->post('/converter/numeral/japanese', function (Request $request) use ($app)
         $hiragana = new Kana();
         $romaji = Converter::toJapaneseNumeral($numeral, Converter::NUMERAL_READING);
         return $app['twig']->render('converter-numeral-japanese.twig', array(
-            'numeral' => $numeral,
+            'original' => $numeral,
             'kanji' => Converter::toJapaneseNumeral($numeral),
             'hiragana' => $hiragana->transliterate($romaji, Kana::STRIP_WHITESPACE_ALL),
             'romaji' => $romaji,
@@ -143,14 +149,11 @@ $app->post('/converter/year/japanese', function (Request $request) use ($app) {
         ));
     } else {
         try {
-            $result = Converter::toJapaneseYear($year);
-            $kana = Converter::toJapaneseYear($year, Converter::YEAR_KANA);
-            $romaji = Converter::toJapaneseYear($year, Converter::YEAR_ROMAJI);
             return $app['twig']->render('converter-year-japanese.twig', array(
-                'year' => $year,
-                'result' => $result,
-                'kana' => $kana,
-                'romaji' => $romaji,
+                'original' => $year,
+                'kanji' => Converter::toJapaneseYear($year),
+                'kana' => Converter::toJapaneseYear($year, Converter::YEAR_KANA),
+                'romaji' => Converter::toJapaneseYear($year, Converter::YEAR_ROMAJI),
             ));
         } catch (Exception $e) {
             return $app['twig']->render('converter.twig', array(
@@ -170,7 +173,7 @@ $app->post('/converter/year/western', function (Request $request) use ($app) {
         try {
             $result = Converter::toWesternYear($year);
             return $app['twig']->render('converter-year-western.twig', array(
-                'year' => $year,
+                'original' => $year,
                 'result' => $result,
             ));
         } catch (Exception $e) {
