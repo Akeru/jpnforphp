@@ -28,6 +28,14 @@
         }
 
     </style>
+    <script>
+        function fillForm(fieldId, value) {
+            textbox = document.getElementById(fieldId);
+            if (textbox !== undefined) {
+                textbox.value = value;
+            }
+        }
+    </script>
 </head>
 <body>
 {% block body %}{% endblock %}

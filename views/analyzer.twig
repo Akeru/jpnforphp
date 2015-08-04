@@ -9,7 +9,7 @@
         <p>&nbsp;</p>
 
         <div class="well">
-            <form class="form-horizontal" method="post" action="/analyzer">
+            <form name="analyzer" class="form-horizontal" method="post" action="/analyzer">
                 <div class="form-group">
                     <label for="string" class="col-sm-2 control-label">Analyze string</label>
 
@@ -18,8 +18,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
+                    <div class="col-sm-offset-2 col-sm-1">
                         <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                    <div class="col-sm-1">
+                        <button class="btn btn-info" onclick="fillForm('string','素晴らしいです')">素晴らしいです</button>
                     </div>
                 </div>
             </form>
