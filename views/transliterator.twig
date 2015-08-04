@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    {% if error is defined %}
+        <p>Error : {{ error }}</p>
+    {% endif %}
+    <p>Transliterate romaji to kana</p>
+    <form method="post" action="/transliterator/kana">
+        <label for="kanastring">String</label> <input id="kanastring" type="text" name="string">
+        <input type="submit">
+    </form>
+    <p>Transliterate kana to romaji</p>
+    <form method="post" action="/transliterator/romaji">
+        <label for="romajistring">String</label> <input id="romajistring" type="text" name="string">
+        <input type="submit">
+    </form>
+{% endblock %}

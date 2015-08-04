@@ -1,0 +1,12 @@
+{
+  "require" : {
+    "ext-mbstring": "*",
+    "silex/silex": "~1.3",
+    "twig/twig": "~1.0",
+    "monolog/monolog": "~1.7",
+    "mbilbille/jpnforphp": "dev-develop"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  }
+}
