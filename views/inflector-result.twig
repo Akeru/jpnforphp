@@ -1,0 +1,38 @@
+{% extends 'layout.twig' %}
+{% block body %}
+    <div class="container">
+        <h3>
+        Inflector results</h3>
+        {% for result in results %}
+            {% for key, value in result.verb %}
+                <div class="row">
+                    <div class="col-sm-4">{{ key }}</div>
+                    <div class="col-sm-8">{{ value }}</div>
+                </div>
+            {% endfor %}
+            <p>&nbsp;</p>
+            {% for key, value in result.inflections %}
+                <div class="row">
+                    <div class="col-sm-4">{{ key }}</div>
+                    <div class="col-sm-8">
+                        {% if value is same as(false) %}
+                            false
+                        {% elseif value is same as(true) %}
+                            true
+                        {% elseif value is iterable %}
+                            {% for entry in value %}
+                                '{{ entry }}'
+                                {% if not loop.last %},{% endif %}
+                            {% endfor %}
+                        {% else %}
+                            {{ value }}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+            {% if not loop.last %}<p>&nbsp;</p>{% endif %}
+        {% endfor %}
+        <p>&nbsp;</p>
+        <a href="/inflector">Back</a>
+    </div>
+{% endblock %}

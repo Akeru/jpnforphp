@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ab9205c4772fc81796615bf557cb9de7",
+    "hash": "73f80af70e49fa63b148c9f90b64ca6c",
     "packages": [
         {
             "name": "mbilbille/jpnforphp",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mbilbille/jpnforphp.git",
-                "reference": "9858af4ad98761218a96df993d8f586a7fa18338"
+                "reference": "c3a944b3cfdf28f875abf010ae90468f2a1cfa25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mbilbille/jpnforphp/zipball/9858af4ad98761218a96df993d8f586a7fa18338",
-                "reference": "9858af4ad98761218a96df993d8f586a7fa18338",
+                "url": "https://api.github.com/repos/mbilbille/jpnforphp/zipball/c3a944b3cfdf28f875abf010ae90468f2a1cfa25",
+                "reference": "c3a944b3cfdf28f875abf010ae90468f2a1cfa25",
                 "shasum": ""
             },
             "require": {
@@ -28,6 +28,7 @@
                 "jpnforphp/analyzer": "self.version",
                 "jpnforphp/converter": "self.version",
                 "jpnforphp/helper": "self.version",
+                "jpnforphp/inflector": "self.version",
                 "jpnforphp/transliterator": "self.version"
             },
             "require-dev": {
@@ -61,20 +62,20 @@
                 "japanese",
                 "library"
             ],
-            "time": "2015-08-03 20:07:09"
+            "time": "2015-08-10 11:29:09"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0"
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc5150cc608f2334c72c3b6a553ec9668a4156b0",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c0c0b4bee3aabce7182876b0d912ef2595563db7",
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7",
                 "shasum": ""
             },
             "require": {
@@ -111,7 +112,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15.x-dev"
+                    "dev-master": "1.16.x-dev"
                 }
             },
             "autoload": {
@@ -137,7 +138,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-07-12 13:54:09"
+            "time": "2015-08-09 17:44:44"
         },
         {
             "name": "pimple/pimple",

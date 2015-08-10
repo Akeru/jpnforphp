@@ -3,6 +3,7 @@
 use JpnForPhp\Analyzer\Analyzer;
 use JpnForPhp\Converter\Converter;
 use JpnForPhp\Helper\Helper;
+use JpnForPhp\Inflector\Inflector;
 use JpnForPhp\Transliterator\Kana;
 use JpnForPhp\Transliterator\Romaji;
 use Symfony\Component\HttpFoundation\Request;
@@ -179,6 +180,38 @@ $app->post('/converter/year/western', function (Request $request) use ($app) {
         } catch (Exception $e) {
             return $app['twig']->render('converter.twig', array(
                 'error' => $e->getMessage()
+            ));
+        }
+    }
+});
+
+$app->get('/inflector', function () use ($app) {
+    return $app['twig']->render('inflector.twig');
+});
+
+$app->post('/inflector', function (Request $request) use ($app) {
+    $string = $request->get('string');
+    if (empty($string)) {
+        return $app['twig']->render('inflector.twig', array(
+            'error' => 'String cannot be empty'
+        ));
+    } else {
+        $verbs = Inflector::getVerb($string);
+        if (!empty($verbs)) {
+            $results = array();
+            foreach ($verbs as $verb) {
+                $results[] = array(
+                    'string' => $string,
+                    'verb' => $verb,
+                    'inflections' => Inflector::inflect($verb)
+                );
+            }
+            return $app['twig']->render('inflector-result.twig', array(
+                'results' => $results
+            ));
+        } else {
+            return $app['twig']->render('inflector.twig', array(
+                'error' => 'Could not find verb ' . $string
             ));
         }
     }
