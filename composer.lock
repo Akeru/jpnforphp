@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "73f80af70e49fa63b148c9f90b64ca6c",
+    "hash": "3c0f065b944592182eb1e26cd3494cbc",
     "packages": [
         {
             "name": "mbilbille/jpnforphp",
@@ -789,7 +789,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "ext-pdo_sqlite": "*"
     },
     "platform-dev": []
 }
