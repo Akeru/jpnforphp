@@ -1,6 +1,7 @@
 {
-  "require" : {
+  "require": {
     "ext-mbstring": "*",
+    "ext-pdo_sqlite": "*",
     "silex/silex": "~1.3",
     "twig/twig": "~1.19",
     "monolog/monolog": "~1.7",
