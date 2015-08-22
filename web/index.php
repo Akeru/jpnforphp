@@ -47,7 +47,10 @@ $app->post('/analyzer', function (Request $request) use ($app) {
             'hasJapaneseWritings' => Analyzer::hasJapaneseWritings($string),
             'hasKana' => Analyzer::hasKana($string),
             'hasKatakana' => Analyzer::hasKatakana($string),
+            'hasLatinLetters' => Analyzer::hasLatinLetters($string),
+            'hasWesternNumerals' => Analyzer::hasWesternNumerals($string),
             'length' => Analyzer::length($string),
+            'segmentation' => Analyzer::segment($string),
         ));
     }
 });

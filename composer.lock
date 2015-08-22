@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mbilbille/jpnforphp.git",
-                "reference": "c3a944b3cfdf28f875abf010ae90468f2a1cfa25"
+                "reference": "ffc36219c98ceba62396e33f5d140d035dac333b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mbilbille/jpnforphp/zipball/c3a944b3cfdf28f875abf010ae90468f2a1cfa25",
-                "reference": "c3a944b3cfdf28f875abf010ae90468f2a1cfa25",
+                "url": "https://api.github.com/repos/mbilbille/jpnforphp/zipball/ffc36219c98ceba62396e33f5d140d035dac333b",
+                "reference": "ffc36219c98ceba62396e33f5d140d035dac333b",
                 "shasum": ""
             },
             "require": {
@@ -37,7 +37,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6-dev"
+                    "dev-master": "0.7-dev"
                 }
             },
             "autoload": {
@@ -62,7 +62,7 @@
                 "japanese",
                 "library"
             ],
-            "time": "2015-08-10 11:29:09"
+            "time": "2015-08-18 20:29:14"
         },
         {
             "name": "monolog/monolog",
@@ -679,16 +679,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.19.0",
+            "version": "v1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90"
+                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/edbeaf43b0a606cdaadc32a11d2673614a377b90",
-                "reference": "edbeaf43b0a606cdaadc32a11d2673614a377b90",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
+                "reference": "1ea4e5f81c6d005fe84d0b38e1c4f1955eb86844",
                 "shasum": ""
             },
             "require": {
@@ -697,7 +697,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.19-dev"
+                    "dev-master": "1.20-dev"
                 }
             },
             "autoload": {
@@ -732,22 +732,22 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-07-31 13:45:26"
+            "time": "2015-08-12 15:56:39"
         }
     ],
     "packages-dev": [
         {
             "name": "heroku/heroku-buildpack-php",
-            "version": "v71",
+            "version": "v75",
             "source": {
                 "type": "git",
                 "url": "https://github.com/heroku/heroku-buildpack-php.git",
-                "reference": "115ddf16d45cff621961d8dd57e14ba1ff1e41dd"
+                "reference": "1f671f8deef2e591f0641a345144558fa8ff6d58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/115ddf16d45cff621961d8dd57e14ba1ff1e41dd",
-                "reference": "115ddf16d45cff621961d8dd57e14ba1ff1e41dd",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/1f671f8deef2e591f0641a345144558fa8ff6d58",
+                "reference": "1f671f8deef2e591f0641a345144558fa8ff6d58",
                 "shasum": ""
             },
             "bin": [
@@ -778,7 +778,7 @@
                 "nginx",
                 "php"
             ],
-            "time": "2015-07-14 00:38:23"
+            "time": "2015-08-21 17:18:32"
         }
     ],
     "aliases": [],
